@@ -1,4 +1,5 @@
-import { description, title } from "@/lib/metadata";
+import { generateMetadata } from "@/lib/farcaster-embed";
+import MovieList from "@/components/movie-list";
 import { generateMetadata } from "@/lib/farcaster-embed";
 import MovieList from "@/components/movie-list";
 

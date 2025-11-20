@@ -6,7 +6,7 @@ export async function GET() {
   );
   const html = await res.text();
   const movieRegex =
-    /<td class="titleColumn">.*?<a href="[^"]+" title="[^"]+">([^<]+)<\/a>.*?<span class="secondaryInfo">\((\d{4})\)<\/span>.*?<td class="ratingColumn imdbRating">.*?<strong title="[^"]+">([^<]+)<\/strong>/gs;
+    /<td class="titleColumn">.*?<a href="[^"]+" title="[^"]+">([^<]+)<\/a>.*?<span class="secondaryInfo">\((\d{4})\)<\/span>.*?<td class="ratingColumn imdbRating">.*?<strong title="[^"]+">([^<]+)<\/strong>/g;
   const movies = [];
   let match;
   let id = 1;
