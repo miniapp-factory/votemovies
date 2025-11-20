@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import MovieCard from "./movie-card";
 
 interface Movie {
   id: string;
@@ -10,6 +9,7 @@ interface Movie {
   year: number;
   imdbScore: number;
   baseScore: number;
+  imdbUrl: string;
 }
 
 export default function MovieList() {
