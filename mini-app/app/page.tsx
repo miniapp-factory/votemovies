@@ -1,7 +1,5 @@
 import { generateMetadata } from "@/lib/farcaster-embed";
 import MovieList from "@/components/movie-list";
-import { generateMetadata } from "@/lib/farcaster-embed";
-import MovieList from "@/components/movie-list";
 
 export { generateMetadata };
 
