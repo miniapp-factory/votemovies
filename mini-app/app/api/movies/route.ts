@@ -103,5 +103,10 @@ export async function GET() {
     { id: "99", image: "/images/movie-99.jpg", title: "Gran Torino", year: 2008, imdbScore: 0, baseScore: 0 },
     { id: "100", image: "/images/movie-100.jpg", title: "Mad Max: Fury Road", year: 2015, imdbScore: 0, baseScore: 0 }
   ];
-  return NextResponse.json(movies);
+  return NextResponse.json(
+    movies.map((movie) => ({
+      ...movie,
+      imdbUrl: `https://www.imdb.com/title/${movie.id}`
+    }))
+  );
 }

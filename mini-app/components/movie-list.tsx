@@ -22,10 +22,19 @@ export default function MovieList() {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full">
+    <ul className="space-y-2">
       {movies.map((movie) => (
-        <MovieCard key={movie.id} {...movie} />
+        <li key={movie.id}>
+          <a
+            href={movie.imdbUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            {movie.title} ({movie.year})
+          </a>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
