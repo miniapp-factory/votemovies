@@ -23,7 +23,7 @@ export default function MovieList() {
 
   return (
     <ul className="space-y-2">
-      {movies.map((movie) => (
+      {movies.map((movie, index) => (
         <li key={movie.id}>
           <a
             href={movie.imdbUrl}
@@ -31,7 +31,7 @@ export default function MovieList() {
             rel="noopener noreferrer"
             className="text-blue-600 hover:underline"
           >
-            {movie.title} ({movie.year})
+            {index + 1}. {movie.title} ({movie.year}) - {movie.imdbScore}
           </a>
         </li>
       ))}
